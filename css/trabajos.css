@@ -5,7 +5,7 @@
 
 .proyectos-categoria h2 {
   font-size: 2.2rem; /* ligeramente más grande */
-  color: #007bff;
+  color: #222;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -98,5 +98,78 @@
   }
   .proyectos-categoria.universitarios .proyecto-card {
     width: 90%; /* se ajusta ligeramente */
+  }
+}
+
+/* proyectos */
+
+.proyecto-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Título y año */
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.anio {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* Descripción breve */
+.descripcion-breve {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Foto grande */
+.foto-grande img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.foto-grande figcaption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* Párrafo */
+.texto {
+  margin: 2rem 0;
+  font-size: 1rem;
+}
+
+/* Dos fotos lado a lado */
+.fotos-dobles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.fotos-dobles img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.fotos-dobles figcaption {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .fotos-dobles {
+    grid-template-columns: 1fr;
   }
 }
