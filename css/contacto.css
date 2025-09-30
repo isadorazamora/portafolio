@@ -1,0 +1,36 @@
+.contactame {
+  background: #f8f9fa;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.contactame h1 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 1.5rem;
+}
+
+.contactame p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-contacto {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-contacto:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
