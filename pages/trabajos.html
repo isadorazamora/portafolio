@@ -62,9 +62,9 @@
 
 <main>
   <!-- Sección Intro -->
-  <section class="intro-trabajos" style="padding: 2rem 0; text-align: center;">
-    <h1>Aquí encontrarás mis trabajos</h1>
-    <p>Se encuentran diferentes trabajos universitarios, casos de estudios, etc.</p>
+  <section class="intro-trabajos" style="padding: 4rem 9rem; text-align: center;">
+    <h1>Trabajos destacados</h1>
+    <p>Mis próximos trabajos se centran en fusionar el análisis profundo de datos con la comprensión del comportamiento del usuario, construyendo un camino sólido desde la investigación hasta el diseño de interfaces intuitivas y visualmente atractivas. Cada proyecto busca generar experiencias digitales significativas, donde la estética, la usabilidad y la accesibilidad se entrelazan para entregar soluciones funcionales y memorables.</p>
   </section>
 
   <!-- Proyectos Universitarios -->
@@ -137,7 +137,34 @@
   <p>Isadora Zamora</p>
 </footer>
 
-  <script src="script.js"></script>
+  <script>
+  const openMenu = document.getElementById('open-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const menu = document.getElementById('menu');
+
+  function checkMenu() {
+    if (window.innerWidth <= 800) {
+      menu.style.display = 'none';
+      openMenu.style.display = 'block';
+    } else {
+      menu.style.display = 'flex';
+      openMenu.style.display = 'none';
+    }
+  }
+
+  openMenu.addEventListener('click', () => {
+    menu.style.display = 'flex';
+    openMenu.style.display = 'none';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    openMenu.style.display = 'block';
+  });
+
+  window.addEventListener('resize', checkMenu);
+  window.addEventListener('DOMContentLoaded', checkMenu);
+</script>
    
 
 </body>

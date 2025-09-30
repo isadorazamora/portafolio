@@ -64,7 +64,7 @@
 
   <section class="contactame">
   <h1>Pongámonos en contacto</h1>
-  <p>Si quieres hablar sobre proyectos, ideas o colaboraciones, no dudes en escribirme. ¡Me encantaría saber de ti!</p>
+  <p>Si quieres conversar sobre proyectos, ideas o colaboraciones, no dudes en escribirme, te dejo mi contacto vía correo. ¡Me encantaría ser parte de tu proyecto!</p>
   <a href="https://mail.google.com/mail/?view=cm&to=isadora.zamora.f@mail.pucv.cl&su=Contacto%20desde%20portafolio&body=Hola%20Isadora,%20quiero%20contactarte%20sobre..." target="_blank" class="btn-contacto">
   Contáctame
   </a>
@@ -78,8 +78,34 @@
   <p>Isadora Zamora</p>
 </footer>
 
-  <script src="script.js"></script>
-   
+<script>
+  const openMenu = document.getElementById('open-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const menu = document.getElementById('menu');
+
+  function checkMenu() {
+    if (window.innerWidth <= 800) {
+      menu.style.display = 'none';
+      openMenu.style.display = 'block';
+    } else {
+      menu.style.display = 'flex';
+      openMenu.style.display = 'none';
+    }
+  }
+
+  openMenu.addEventListener('click', () => {
+    menu.style.display = 'flex';
+    openMenu.style.display = 'none';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    openMenu.style.display = 'block';
+  });
+
+  window.addEventListener('resize', checkMenu);
+  window.addEventListener('DOMContentLoaded', checkMenu);
+</script>   
 
 </body>
 

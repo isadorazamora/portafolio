@@ -66,7 +66,7 @@
     <div class="sobre-mi-texto">
       <h2>Conóceme mejor</h2>
       <p>
-        Soy Isadora Zamora Figueroa y vivo en Villa Alemana, una ciudad al interior de Valparaíso. Con un trayecto artístico desde el colegio, decidí estudiar Diseño de Interacción en la Pontificia Universidad Católica de Valparaíso, en simultáneo realicé una diplomatura de Desarrollador UX/UI en Coderhouse, la cual me permitió explorar el diseño digital. Terminé mis estudios en julio de 2025 y actualmente me encuentro buscando oportunidades laborales que me permitan potenciar mis habilidades. En mi tiempo libre busco disfrutar del patinaje, reirme con mis seres queridos y en ocasiones, buscar nuevas cafeterías.
+        Soy Isadora Zamora Figueroa y vivo en Villa Alemana, una ciudad al interior de Valparaíso. Con un trayecto artístico desde el colegio, decidí estudiar Diseño de Interacción en la Pontificia Universidad Católica de Valparaíso, en simultáneo realicé una diplomatura de Desarrollador UX/UI en Coderhouse, la cual me permitió explorar el diseño digital. Concluí ambos estudios con distinción en julio de 2025 y actualmente me encuentro buscando oportunidades laborales que me permitan potenciar mis habilidades. En mi tiempo libre busco disfrutar del patinaje, reirme con mis seres queridos y en ocasiones, buscar nuevas cafeterías.
       </p>
     </div>
     <div class="sobre-mi-img">
@@ -128,7 +128,34 @@
   <p>Isadora Zamora</p>
 </footer>
 
-  <script src="script.js"></script>
+<script>
+  const openMenu = document.getElementById('open-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const menu = document.getElementById('menu');
+
+  function checkMenu() {
+    if (window.innerWidth <= 800) {
+      menu.style.display = 'none';
+      openMenu.style.display = 'block';
+    } else {
+      menu.style.display = 'flex';
+      openMenu.style.display = 'none';
+    }
+  }
+
+  openMenu.addEventListener('click', () => {
+    menu.style.display = 'flex';
+    openMenu.style.display = 'none';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    openMenu.style.display = 'block';
+  });
+
+  window.addEventListener('resize', checkMenu);
+  window.addEventListener('DOMContentLoaded', checkMenu);
+</script>
    
 
 </body>

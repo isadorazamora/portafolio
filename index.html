@@ -66,11 +66,11 @@
     <section class="isadorazamora">
       <div class="isadorazamora-info">
         <h1 class="isadorazamora-titulo"> Hola! Soy Isadora
-          <h2>Y soy Diseñadora UX/UI</h2>
+          <h2> soy Diseñadora de Interacción y desarrollador UX/UI</h2>
 
           <p class="isadorazamora-detalles">
-            Me especializo no solo en la estética y funcionalidad, sino también en el análisis del comportamiento del
-            usuario para diseñar soluciones que respondan verdaderamente a sus necesidades.
+            Me especializo no solo en la estética y funcionalidad, también hago énfasis en el análisis del comportamiento del
+            usuario para lograr diseñar soluciones que respondan verdaderamente a sus necesidades.
           </p>
           <a href="docs/IsadoraZamoraCV.pdf" download class="btn-descarga">
             Descargar CV
@@ -90,7 +90,7 @@
       <div class="imagen-item"><img src="img/frisa14.png" alt="Trabajo 2"></div>
       <div class="imagen-item"><img src="img/efe5.png" alt="Trabajo 3"></div>
       <div class="imagen-item"><img src="img/efe2.png" alt="Trabajo 4"></div>
-      <div class="imagen-item"><img src="img/frisa2.png" alt="Trabajo 5"></div>
+      <div class="imagen-item"><img src="img/frisa8.png" alt="Trabajo 5"></div>
     </div>
   </section>
 
@@ -146,7 +146,35 @@
     <p>Isadora Zamora</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+  const openMenu = document.getElementById('open-menu');
+  const closeMenu = document.getElementById('close-menu');
+  const menu = document.getElementById('menu');
+
+  function checkMenu() {
+    if (window.innerWidth <= 800) {
+      menu.style.display = 'none';
+      openMenu.style.display = 'block';
+    } else {
+      menu.style.display = 'flex';
+      openMenu.style.display = 'none';
+    }
+  }
+
+  openMenu.addEventListener('click', () => {
+    menu.style.display = 'flex';
+    openMenu.style.display = 'none';
+  });
+
+  closeMenu.addEventListener('click', () => {
+    menu.style.display = 'none';
+    openMenu.style.display = 'block';
+  });
+
+  window.addEventListener('resize', checkMenu);
+  window.addEventListener('DOMContentLoaded', checkMenu);
+</script>
+
 
 
 </body>
