@@ -153,10 +153,9 @@ body {
 
 .imagenes-container {
   display: flex;
-  gap: 1rem;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .imagenes-container.visible {
@@ -165,20 +164,38 @@ body {
 }
 
 .imagen-item {
-  flex: 1;
-  min-width: 150px;
-  overflow: hidden;
+  flex: 1 1 180px;
+  max-width: 220px;
+  min-width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .imagen-item img {
   width: 100%;
   height: auto;
-  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   transition: transform 0.5s ease;
 }
 
 .imagen-item img:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 700px) {
+  .imagenes-container {
+    gap: 1rem;
+  }
+  .imagen-item {
+    max-width: 100%;
+    min-width: 120px;
+  }
+  .imagen-item img {
+    border-radius: 8px;
+  }
 }
 
 /* ================== SECCIÓN UX/UI ================== */
